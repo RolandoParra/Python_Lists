@@ -40,7 +40,7 @@ felicidades = r"""
 
 print(bienvenido)
 print()
-prnt()
+print()
 
 
 def menu():
@@ -149,3 +149,5 @@ def lista_de_edades_y_gustos_musicales():
   for i in range(len(lista_gustos)):
     if lista_gustos[i].lower() == "rock":
       print(f"Al compañero {i+1} le gusta el rock")
+
+menu()
