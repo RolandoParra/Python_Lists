@@ -56,7 +56,7 @@ def menu():
     lista_de_edades_y_gustos_musicales()
   elif elección == "3":
     print("Adios!")
-    time.sleep(1)
+    time.sleep(3)
     exit()
   else:
     print("Opción no válida, intenta de nuevo")
@@ -149,5 +149,6 @@ def lista_de_edades_y_gustos_musicales():
   for i in range(len(lista_gustos)):
     if lista_gustos[i].lower() == "rock":
       print(f"Al compañero {i+1} le gusta el rock")
+  input()
 
 menu()
