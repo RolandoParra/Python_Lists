@@ -48,13 +48,17 @@ def menu():
   print()
   print("1. Crear una lista de amigos")
   print("2. lista de edades y gustos musicales")
-  print("3. Salir")
-  elección = input("Elección: ")
+  print("3. ejercicio 3")
+  print("4. Salir")
+  print()
+  elección = input("Elección (elija el número): ")
   if elección == "1":
     lista_de_amigos()
   elif elección == "2":
     lista_de_edades_y_gustos_musicales()
   elif elección == "3":
+    ejercisio3()
+  elif elección == "4":
     print("Adios!")
     time.sleep(3)
     exit()
@@ -150,5 +154,20 @@ def lista_de_edades_y_gustos_musicales():
     if lista_gustos[i].lower() == "rock":
       print(f"Al compañero {i+1} le gusta el rock")
   input()
+
+def ejercisio3():
+  print()
+  
+  lista = []
+  for i in range(5):
+    num = int(input("Ingresa un número: "))
+    lista.append(num)
+  n = len(lista)
+  if n >= 1:
+    tupla = (lista[0], lista[1])
+    print("Tu lista como tupla es:", tupla)
+  else:
+    print("La lista está vacía, no se puede convertir a tupla.")
+
 
 menu()
