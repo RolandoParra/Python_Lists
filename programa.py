@@ -1,4 +1,5 @@
 import time
+import random
 
 bienvenido = r"""
 ▗▄▄▖ ▗▄▄▄▖▗▄▄▄▖▗▖  ▗▖▗▖  ▗▖▗▄▄▄▖▗▖  ▗▖▗▄▄▄▖▗▄▄▄   ▗▄▖ 
@@ -48,8 +49,9 @@ def menu():
   print()
   print("1. Crear una lista de amigos")
   print("2. lista de edades y gustos musicales")
-  print("3. ejercicio 3")
-  print("4. Salir")
+  print("3. lista a tupla")
+  print("4. lista de números positivos")
+  print("5. Salir")
   print()
   elección = input("Elección (elija el número): ")
   if elección == "1":
@@ -59,7 +61,9 @@ def menu():
   elif elección == "3":
     ejercisio3()
   elif elección == "4":
-    print("Adios!")
+    ejercicio4()
+  elif elección == "5":
+    print("Adiós!")
     time.sleep(3)
     exit()
   else:
@@ -160,14 +164,37 @@ def ejercisio3():
   
   lista = []
   for i in range(5):
+    time.sleep(0.3)
     num = int(input("Ingresa un número: "))
     lista.append(num)
   n = len(lista)
   if n >= 1:
+    time.sleep(0.3)
     tupla = (lista[0], lista[1])
     print("Tu lista como tupla es:", tupla)
   else:
+    time.sleep(0.3)
     print("La lista está vacía, no se puede convertir a tupla.")
+  print()
 
+def ejercicio4():
+  print()
+  print()
+  lista = []
+  for i in range(10):
+    time.sleep(0.2)
+    print("...")
+    num = random.randint(-100, 100)
+    lista.append(num)
+  
+  new_lista = []
+  for num in lista:
+    if num > 0:
+      new_lista.append(num)
+  
+  time.sleep(0.3)
+  print("La nueva lista con solo números positivos es:", new_lista)
+  print("La lista original era:", lista)
+  input()
 
 menu()
